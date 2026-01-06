@@ -1,0 +1,155 @@
+<svg viewBox="0 0 450 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Neon glow filters -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Gradients -->
+    <radialGradient id="redPiece" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#ff4444"/>
+      <stop offset="100%" style="stop-color:#cc0000"/>
+    </radialGradient>
+    
+    <radialGradient id="yellowPiece" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#ffff44"/>
+      <stop offset="100%" style="stop-color:#cccc00"/>
+    </radialGradient>
+    
+    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8a2be2"/>
+      <stop offset="50%" style="stop-color:#9932cc"/>
+      <stop offset="100%" style="stop-color:#7b68ee"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Black background -->
+  <rect width="450" height="120" fill="#000000"/>
+  
+  <!-- Connect Four grid frame (stylized) -->
+  <g transform="translate(350, 20)">
+    <!-- Grid frame with neon glow -->
+    <rect x="0" y="0" width="84" height="80" fill="none" stroke="url(#neonPurple)" stroke-width="2" rx="8" filter="url(#neonGlow)">
+      <animate attributeName="stroke-width" values="2;3;2" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Grid holes (6 columns, 4 rows) -->
+    <g fill="#222">
+      <circle cx="12" cy="15" r="5"/>
+      <circle cx="24" cy="15" r="5"/>
+      <circle cx="36" cy="15" r="5"/>
+      <circle cx="48" cy="15" r="5"/>
+      <circle cx="60" cy="15" r="5"/>
+      <circle cx="72" cy="15" r="5"/>
+      <circle cx="12" cy="30" r="5"/>
+      <circle cx="24" cy="30" r="5"/>
+      <circle cx="36" cy="30" r="5"/>
+      <circle cx="48" cy="30" r="5"/>
+      <circle cx="60" cy="30" r="5"/>
+      <circle cx="72" cy="30" r="5"/>
+      <circle cx="12" cy="45" r="5"/>
+      <circle cx="24" cy="45" r="5"/>
+      <circle cx="36" cy="45" r="5"/>
+      <circle cx="48" cy="45" r="5"/>
+      <circle cx="60" cy="45" r="5"/>
+      <circle cx="72" cy="45" r="5"/>
+      <circle cx="12" cy="60" r="5"/>
+      <circle cx="24" cy="60" r="5"/>
+      <circle cx="36" cy="60" r="5"/>
+      <circle cx="48" cy="60" r="5"/>
+      <circle cx="60" cy="60" r="5"/>
+      <circle cx="72" cy="60" r="5"/>
+    </g>
+    
+    <!-- Animated connecting pieces in grid -->
+    <circle cx="12" cy="60" r="4" fill="url(#redPiece)" filter="url(#softGlow)">
+      <animate attributeName="cy" values="-10;60" dur="2s" begin="1s" fill="freeze"/>
+    </circle>
+    <circle cx="24" cy="45" r="4" fill="url(#yellowPiece)" filter="url(#softGlow)">
+      <animate attributeName="cy" values="-10;45" dur="2s" begin="1.5s" fill="freeze"/>
+    </circle>
+    <circle cx="36" cy="60" r="4" fill="url(#redPiece)" filter="url(#softGlow)">
+      <animate attributeName="cy" values="-10;60" dur="2s" begin="2s" fill="freeze"/>
+    </circle>
+    <circle cx="48" cy="45" r="4" fill="url(#yellowPiece)" filter="url(#softGlow)">
+      <animate attributeName="cy" values="-10;45" dur="2s" begin="2.5s" fill="freeze"/>
+    </circle>
+  </g>
+  
+  <!-- Main text: ConnectMore -->
+  <g font-family="Inter, Poppins, Arial, sans-serif" font-size="36" font-weight="bold">
+    
+    <!-- C -->
+    <text x="20" y="70" fill="url(#neonPurple)" filter="url(#neonGlow)">C
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0s" fill="freeze"/>
+    </text>
+    
+    <!-- O (red Connect Four piece) -->
+    <circle cx="52" cy="55" r="13" fill="url(#redPiece)" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.5s" fill="freeze"/>
+    </circle>
+    
+    <!-- N -->
+    <text x="75" y="70" fill="url(#neonPurple)" filter="url(#neonGlow)">N
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.2s" fill="freeze"/>
+    </text>
+    
+    <!-- N -->
+    <text x="105" y="70" fill="url(#neonPurple)" filter="url(#neonGlow)">N
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.4s" fill="freeze"/>
+    </text>
+    
+    <!-- E -->
+    <text x="135" y="70" fill="url(#neonPurple)" filter="url(#neonGlow)">E
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.6s" fill="freeze"/>
+    </text>
+    
+    <!-- C -->
+    <text x="165" y="70" fill="url(#neonPurple)" filter="url(#neonGlow)">C
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.8s" fill="freeze"/>
+    </text>
+    
+    <!-- T -->
+    <text x="195" y="70" fill="url(#neonPurple)" filter="url(#neonGlow)">T
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.0s" fill="freeze"/>
+    </text>
+    
+    <!-- M -->
+    <text x="220" y="70" fill="url(#neonPurple)" filter="url(#neonGlow)">M
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.2s" fill="freeze"/>
+    </text>
+    
+    <!-- O (yellow Connect Four piece) -->
+    <circle cx="257" cy="55" r="13" fill="url(#yellowPiece)" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.4s" fill="freeze"/>
+    </circle>
+    
+    <!-- R -->
+    <text x="280" y="70" fill="url(#neonPurple)" filter="url(#neonGlow)">R
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.6s" fill="freeze"/>
+    </text>
+    
+    <!-- E -->
+    <text x="310" y="70" fill="url(#neonPurple)" filter="url(freeze)">E
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.8s" fill="freeze"/>
+    </text>
+    
+  </g>
+  
+
+  
+
+  
+</svg>

@@ -1,0 +1,36 @@
+# Site Build Settings
+title: Lee Martin
+description: Full-Stack Developer building apps that simplify daily life
+baseurl: ""
+url: "https://rightpathprogramming.com"
+
+# Author
+author:
+  name: Lee Martin
+  email: rightpathprogramming@gmail.com
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/

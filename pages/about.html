@@ -1,0 +1,78 @@
+---
+layout: default
+title: About
+permalink: /about/
+---
+
+<section class="page-content">
+  <div class="container">
+    <h1 class="page-title">About Me</h1>
+
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Hi, I'm Lee Martin</h2>
+        <p>
+          I'm a Full-Stack Developer based in Birmingham, Alabama, with a passion for building apps that simplify daily life. With a background from Duke University and Georgia Tech, I bring a strong foundation in computer science and engineering to every project.
+        </p>
+        <p>
+          My work focuses on creating intuitive, user-friendly applications that solve real problems. From meal planning apps that take the stress out of dinner decisions to community platforms that help people connect, I believe technology should make life easier, not more complicated.
+        </p>
+        <p>
+          I specialize in mobile development with Flutter and web development with Next.js. I'm also experienced with Webflow for rapid website development and various backend technologies including Firebase and AWS.
+        </p>
+
+        <div class="education">
+          <h3>Education</h3>
+          <div class="education-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Duke University</span>
+          </div>
+          <div class="education-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Georgia Tech</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-skills">
+        <h3 style="font-size: 1.25rem; margin-bottom: 24px;">Skills</h3>
+        <div class="skills-list">
+          {% for skill in site.data.settings.skills %}
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>{{ skill.name }}</span>
+              <span>{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="fill" style="width: {{ skill.level }}%"></div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <div class="contact-content">
+      <h2 class="section-title">Let's Connect</h2>
+      <p>I'm always open to discussing new projects, opportunities, or just connecting with fellow developers and tech enthusiasts.</p>
+      <div class="contact-links">
+        <a href="mailto:rightpathprogramming@gmail.com" class="contact-link">
+          <i class="fas fa-envelope"></i>
+          <span>Email Me</span>
+        </a>
+        <a href="https://linkedin.com/in/lee-martin-developer" target="_blank" rel="noopener" class="contact-link">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/lbm54" target="_blank" rel="noopener" class="contact-link">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
