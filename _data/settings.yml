@@ -1,7 +1,7 @@
 # Site Settings
 title: Lee Martin
-tagline: Full-Stack Developer
-description: Building apps that simplify daily life
+tagline: Full-Stack & AI Developer
+description: Building AI-powered apps that simplify daily life
 baseurl: ""
 url: "https://rightpathprogramming.com"
 
@@ -10,7 +10,7 @@ author:
   name: Lee Martin
   email: rightpathprogramming@gmail.com
   location: Birmingham, Alabama
-  bio: "Full-Stack Developer with a passion for building apps that simplify daily life. Duke and Georgia Tech alumnus specializing in Flutter, Next.js, and Webflow."
+  bio: "Full-Stack & AI Developer with a passion for building intelligent apps that simplify daily life. Duke and Georgia Tech alumnus with 3+ years of AI development experience."
 
 # Social Links
 social:
@@ -29,22 +29,35 @@ menu:
 
 # Skills
 skills:
-  - name: Flutter
+  - name: Flutter/Dart
     level: 95
-  - name: Next.js
+  - name: AI/ML Development
     level: 90
-  - name: Dart
-    level: 95
+  - name: Next.js/React
+    level: 90
+  - name: Java
+    level: 90
   - name: JavaScript/TypeScript
     level: 90
-  - name: Webflow
+  - name: WordPress
+    level: 85
+  - name: Python
+    level: 85
+  - name: AWS/Cloud
     level: 85
   - name: Firebase
     level: 85
-  - name: AWS
+  - name: Webflow
     level: 80
-  - name: Python
-    level: 75
+
+# AI Tools & Platforms
+ai_tools:
+  - Amazon Bedrock
+  - Claude Code
+  - OpenAI API
+  - Google AI SDK
+  - Microsoft AutoGen
+  - Flutter GenUI
 
 # Google Analytics (optional - add your tracking ID)
 # google_analytics: UA-XXXXXXXX-X
